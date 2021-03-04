@@ -1,0 +1,268 @@
+/*公共样式*/
+	.text-hidden{
+		text-indent: -9999px;
+		overflow: hidden;
+	}
+	.text-ellipsis{
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+
+
+/*search*/
+.search{
+	position: relative;
+	border: 1px solid #cfd2d5;
+}
+.search-inputbox{
+	width: 605px;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 10px;
+	border: none;
+	background-color: #fff;
+	outline: none;
+
+}
+.search-btn{
+	width: 73px;
+	height: 40px;
+	font-size: 14px;
+	color: #fff;
+	border: none;
+	background-color: #ca003f;
+	text-align: center;
+	cursor: pointer;
+}
+.search-layer{
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: -1px;
+	width: 100%;
+	background-color: #fff;
+	border: 1px solid #cfd2d5;
+  z-index: 2;
+}
+.search-layer-item{
+	height: 24px;
+	line-height: 24px;
+	padding: 0 10px;
+	cursor: pointer;
+
+	
+}
+.search-layer-item:hover{
+	background-color: #f3f5f7;
+}
+
+/*中部*/
+/*category 中部左侧*/
+ 	.category {
+        
+        width: 208px;
+        margin-top: -62px;
+        font-size: 14px;
+    }
+    .category-title {
+        display: block;
+        height: 54px;
+        line-height: 54px;
+        padding: 0 20px;
+        background-color: #c81414;
+        color: #fff;
+    }
+
+    .category-title .icon {
+        margin-right: 10px;
+        font-size: 16px;
+    }
+
+    .category-list {
+        height: 512px;
+        background-color: #f01414;
+    }
+
+    .category .dropdown-toggle {
+        height: 36px;
+        line-height: 36px;
+        padding-left: 16px;
+        color: #fff;
+        position: relative;
+    }
+    .category .dropdown-link {
+        color: #fff;
+    }
+  
+    .category .dropdown-arrow {
+        position: absolute;
+        right: 12px;
+        font-family: simsun;
+        font-weight: bold;
+    }
+
+    .category-active .dropdown-toggle,
+    .category-active .dropdown-link {
+        color: #f01414;
+    }
+  /*  -------------------------中部左侧-----------------------------*/
+	.category .dropdown-layer{
+    	display: none;
+    	position: absolute;
+		top: 0;
+		left: 208px;
+		padding: 8px 0 31px 0;
+		line-height: 20px;
+		width: 744px;
+		min-height: 460px;
+		-webkit-transition: width 2s;
+		transition: width 2s;
+    }
+    .category .category-detail{
+    	margin-top: 24px;
+    	line-height: 20px;
+
+    }
+	.category-detail-title{
+		width: 84px;
+		padding-right: 16px;
+		border-right: 1px solid #d9dde1;
+		text-align: right;
+	}
+	.category-detail-title-link{
+		color: #07111b;
+		font-weight: bold;
+	}
+	.category-detail-item{
+		width: 592px;
+		padding-left: 16px;
+	}
+	.category-detail-item .link{
+		display: inline-block;
+		margin-right: 16px;
+		color: #07111b;
+	}
+	.category .dropdown:hover{
+		background-color: #fff;
+	}
+	 .category .dropdown:hover .dropdown-link{
+    	color:  #f01414; 
+    }
+    .category .dropdown:hover .dropdown-layer{
+		display: block;
+		z-index: 2;
+		background-color: #fff;
+	}
+	.category .dropdown-loading{
+		background: url(../img/loading.gif) no-repeat;
+		width: 32px;
+		height: 32px;
+		margin: 220px auto;
+	}
+/*carousel 中部中心区域*/
+    .focus-slider{
+        width: 728px;
+        height: 504px;
+        margin-left: 8px; 
+        position:relative;
+    }
+      /*轮播图片集合处理:
+      1.将其设置为脱离文档流
+      2.设置距顶部和左侧都为0
+      */
+    .focus-slider .img li{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+      /*顺序按钮区域处理：
+      1.设置脱离文档流
+      2.通过设置text-align、width使其整体水平居中
+      3.设置距离底部20px
+      */
+    .focus-slider .num{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        bottom: 20px;
+    }
+   /*顺序按钮处理:
+      1.将其设置为行级及块级兼容显示
+      2.设置其宽高
+      3.设置背景色及字体颜色
+      4.设置字体水平居中
+      5.通过设置line-height与height一致，使其字体纵向居中
+      6.设置其样式为圆形
+      7.增加按钮左右间距
+      */
+    .focus-slider .num > li{
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: #000;
+        color: white;
+        text-align: center;
+        line-height: 20px;
+        border-radius: 50%;
+        margin: 0 20px;
+    }
+     /*左、右按钮相同部分处理:
+      1.设置其脱离文档流
+      2.设置其宽高
+      3.设置背景色及字体颜色
+      4.设置字体水平居中
+      5.通过设置line-height与height一致，使其字体纵向居中
+      6.通过设置top、margin-top使其整体纵向居中
+      7.默认不显示
+      */
+    .focus-slider .btn{
+      	display: none;
+      	position: absolute;
+      	top: 50%;
+      	margin-top: -31px;
+      	width: 28px;
+      	height: 62px;
+      	line-height: 62px;
+      	background-color: #000;
+      	opacity: 0.8;
+      	filter: alpha(opacity=80);
+      	color: #fff;
+      	font-size: 22px;
+      	font-family: simsun;
+      	text-align: center;
+        cursor: pointer;
+      }
+      /*左侧按钮处理:
+      设置左侧为0
+      */
+     .focus-slider .left_btn{
+      	left: 0;
+      }
+     /*右侧按钮处理:
+      设置右侧为0
+      */
+     .focus-slider .right_btn{
+      	right: 0;
+      }
+     /*鼠标悬浮至轮播图区域时左、右按钮处理:
+      1.设置左右按钮显示样式为行级块级兼容
+      2.设置鼠标放置在左右按钮时样式为小手
+      */
+     .focus-slider .focus-slider:hover .btn{
+      	display: inline-block;
+      	cursor: pointer;
+      }
+
+     /*设置顺序按钮初始按钮样式:
+      设置为红色（由于样式级别问题会导致设置无效，可通过两种方式解决：
+      1.后面加上!important
+      2.将css定位写详细，比如：.outer .num .current{……
+      ）
+      */
+     .focus-slider .current{
+      	background-color: #fff!important;
+      	border: 2px solid darkgray;
+      	cursor: pointer;
+      }
